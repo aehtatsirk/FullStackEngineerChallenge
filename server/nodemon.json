@@ -1,0 +1,9 @@
+{
+  "env": {
+    "MONGO_USER": "root",
+    "MONGO_PASSWORD": "password",
+    "MONGO_DB": "employee_feedback",
+    "MONGO_HOST": "localhost",
+    "SECRET_KEY": "insertsecretkeyhere"
+  }
+}
