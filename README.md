@@ -1,39 +1,56 @@
 # Full Stack Developer Challenge
-This is an interview challengs. Please feel free to fork. Pull Requests will be ignored.
+ Design a web application that allows employees to submit feedback toward each other's performance review.
+ [Code Challenge](https://github.com/Pay-Baymax/FullStackEngineerChallenge)
 
-## Requirements
-Design a web application that allows employees to submit feedback toward each other's performance review.
+# Technology Stack
+### /client/
+- React Hooks, Bootstrap, Apollo client, GraphQl
+- Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+ 
+### /server/
+- GraphQL, NodeJS, Express, MongoDB
+- Open [http://localhost:5000/graphql](http://localhost:5000/graphql) to view it in the browser.
 
-*Partial solutions are acceptable.*  It is not necessary to submit a complete solution that implements every requirement.
+## Assumptions
+- A user can login or create an account
+- Every employee has one performance review
+- Each performance review has many employee feedbacks
+- Admin can assign a reviewer other than the employee him/herself to a performance review
+- Employee can only view feedback requests, and submit a feedback to other performance review
 
-### Admin view
-* Add/remove/update/view employees
-* Add/update/view performance reviews
-* Assign employees to participate in another employee's performance review
+# Finished Tasks
+### /client/
+1. Login and authentication
+2. Create Account
+3. View Employee
+4. View Performance
+5. View Feedback Requests
 
-### Employee view
-* List of performance reviews requiring feedback
-* Submit feedback
+### /server/
+1. CRUD employee
+2. CRU performance
+3. CRU feedback
+4. login and authentication
 
-## Challenge Scope
-* High level description of design and technologies used
-* Server side API (using a programming language and/or framework of your choice)
-  * Implementation of at least 3 API calls
-  * Most full stack web developers at PayPay currently use Java, Ruby on Rails, or Node.js on the server(with MySQL for the database), but feel free to use other tech if you prefer
-* Web app
-  * Implementation of 2-5 web pages using a modern web framework (e.g. React or Angular) that talks to server side
-    * This should integrate with your API, but it's fine to use static responses for some of it 
-* Document all assumptions made
-* Complete solutions aren't required, but what you do submit needs to run.
+#Pending Tasks
+1. Authentication of API and UI screen
+2. ADMIN and Employee View
+3. Unimplemented APIS to UI
+4. Tests
 
-## How to complete this challenge
-* Fork this repo in github
-* Complete the design and code as defined to the best of your abilities
-* Place notes in your code to help with clarity where appropriate. Make it readable enough to present to the PayPay interview team
-* Complete your work in your own github repo and send the results to us and/or present them during your interview
+#Data Design
+- Employee has one performance and many Feedback Requests
+- Performance has many Feedbacks
+- Feedback has Reviewer (Employee) and Performance Review
 
-## What are we looking for? What does this prove?
-* Assumptions you make given limited requirements
-* Technology and design choices
-* Identify areas of your strengths
-* This is not a pass or fail test, this will serve as a common ground that we can deep dive together into specific issues
+## Available Scripts
+
+In the project directory, you can run:
+
+### `npm install`
+
+Installs the node modules. <br />
+
+### `npm run start`
+
+Runs the app in the development mode.<br />
